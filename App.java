@@ -56,7 +56,7 @@ public class App
                 double error = y_true - y_predicted;
                 double absoluteError = Math.abs(error);
 
-                // Calculating the values
+                  /* Calculating the values */
                 squaredErrorSum += error * error;
                 absoluteErrorSum += absoluteError;
                 relativeErrorSum += absoluteError / Math.abs(y_true);
@@ -64,12 +64,12 @@ public class App
                 count++;
             }
 
-            // Calculating the metrics 
+             /* Calculating the metrics */
             double mse = squaredErrorSum / count;
             double mae = absoluteErrorSum / count;
             double mare = relativeErrorSum / count; 
 
-            // Printing the results 
+              /* Printing the results */
             System.out.println("for " + file);
             System.out.println("\tMSE = " + mse);
             System.out.println("\tMAE = " + mae);
@@ -92,7 +92,7 @@ public class App
             }
         }
 
-        // Printing the best models
+        /* Printing the best models */
         System.out.println("According to MSE, the best model is " + bestMSEFilename);
         System.out.println("According to MAE, the best model is " + bestMAEFilename);
         System.out.println("According to MARE, the best model is " + bestMAREFilename);
